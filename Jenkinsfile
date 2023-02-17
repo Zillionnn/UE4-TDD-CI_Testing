@@ -1,9 +1,10 @@
 pipeline {
   agent {
-    node {
-      label 'CITesting'
-      customWorkspace "D:\\CITestingWorkspace"//use backward slashes to avoid problems with how Windows uses directories!!
-    }
+    node any
+//     node {
+//       label 'CITesting'
+//       customWorkspace "D:\\CITestingWorkspace"//use backward slashes to avoid problems with how Windows uses directories!!
+//     }
   }//^all this is necessary to run the build in a special workspace.
   environment {
     ue4Path = "C:\\Program Files\\Epic Games\\UE_4.25"
